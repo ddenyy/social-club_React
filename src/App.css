@@ -1,38 +1,105 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app {
+  width: 100%;
+  height: 100vh;
+  background-color: #393939;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.app__content {
+  width: 1280px;
+  height: 100%;
+  max-width: calc(100% - 2 * 40px);
+  box-sizing: border-box;
+  display: grid;
+  grid-template-areas: 
+  "header header header"
+  "nav main main"
+  "nav main main";
+  grid-template-rows: 60px 1fr;
+  grid-template-columns: 180px 1fr;
+  gap: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.header {
+  background-color: #313131;
+  width: 100%;
+  height: 60px;
+  grid-area: header;
+  border: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.header__logo {
+  grid-area: logo;
+  background-color: red;
+  width: 38px;
+  height: 38px;
+}
+
+.content {
+  grid-area: main;
+}
+
+.navigation {
+  grid-area: nav;
+  width: 100%;
+  background-color: #313131;
+}
+
+.navigation__list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navigation__link{
+  color: #FFFFFF;
+  font-size: 18px;
+}
+
+.navigation__item:last-child{
+  margin-top: 20px;
+}
+
+.content {
+  width: 100%;
+  height: 100%;
+  background-color: #323232;
+}
+
+.title_position_friends{
+  color: #FFFFFF;
+}
+
+.navigation__content{
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.friends-list{
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  position: relative;
+}
+
+.friends-list__item{
+  width: 40px;
+  height: 40px;
+  background-image: url('./image/Grumpy-Cat-Oh-Great-Im-a-Background-2048x2048.jpg');
+  background-size: contain;
+  background-position: center;
+  border-radius: 50%;
+}
+
+.friends-list__name{
+  position: absolute;
+  top: 22px;
 }

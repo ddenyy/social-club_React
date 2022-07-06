@@ -1,23 +1,54 @@
 import logo from './logo.svg';
+
 import './App.css';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='app'>
+      <div className='app__content'>
+        <header className='header'>
+          <img className='header__logo' />
+        </header>
+        <nav className='navigation'>
+          <div className='navigation__content'>
+          <ul className='navigation__list'>
+            <li className='navigation__item'>
+              <a className='navigation__link'>Profile</a>
+            </li>
+            <li className='navigation__item'>
+              <a className='navigation__link'>Messages</a>
+            </li>
+            <li className='navigation__item'>
+              <a className='navigation__link'>News</a>
+            </li>
+            <li className='navigation__item'>
+              <a className='navigation__link'>Music</a>
+            </li>
+            <li className='navigation__item'>
+              <a className='navigation__link'>Settings</a>
+            </li>
+          </ul>
+          <div className='navigation__friends'>
+            <h2 className='title title_position_friends'>Friends</h2>
+            <ul className='friends-list'>
+              <li className='friends-list__item'>
+                  <a className='friends-list__link'></a>
+                  <p className='friends-list__name'>Биба</p>
+              </li>
+              <li className='friends-list__item'>
+                  <a className='friends-list__link'></a>
+                  <p className='friends-list__name'>Боба</p>
+              </li>
+              <li className='friends-list__item'>
+                  <a className='friends-list__link'></a>
+                  <p className='friends-list__name'>Гоба</p>
+              </li>
+            </ul>
+          </div>
+          </div>
+        </nav>
+        <main className='content'></main>
+      </div>
     </div>
   );
 }
